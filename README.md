@@ -124,8 +124,8 @@ mrx go project
 The project was created not to be used, but for practice.
 Look into other projects if you were looking for a better way to traverse through your file system:
 
-- (zsh-z)[https://github.com/agkozak/zsh-z] Jump quickly to directories that you have visited "frecently.".
-- (zoxide)[https://github.com/ajeetdsouza/zoxide] A smarter cd command.
+- [zsh-z](https://github.com/agkozak/zsh-z) Jump quickly to directories that you have visited "frecently.".
+- [zoxide](https://github.com/ajeetdsouza/zoxide) A smarter cd command.
 
 ## License
 
