@@ -121,11 +121,11 @@ mrx go project
 
 ## Notes
 
-The project was created not to be used, but for practice
-look into other projects if you were looking for a better way to traverse through your file system:
+The project was created not to be used, but for practice.
+Look into other projects if you were looking for a better way to traverse through your file system:
 
-https://github.com/agkozak/zsh-z
-https://github.com/ajeetdsouza/zoxide
+- (zsh-z)[https://github.com/agkozak/zsh-z] Jump quickly to directories that you have visited "frecently.".
+- (zoxide)[https://github.com/ajeetdsouza/zoxide] A smarter cd command.
 
 ## License
 
