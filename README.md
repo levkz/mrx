@@ -38,6 +38,22 @@ You can verify the installation:
 which mrx
 ```
 
+## Completion
+
+Run a `mrx completion` command to get instructions on how to setup completions for your shell.
+
+```bash
+mrx completion
+```
+
+### zsh
+
+Add this to your `.zshrc` for command and labels completion
+
+```bash
+source <(mrx completion -c zsh)
+```
+
 ## Commands
 
 ### Add a bookmark
@@ -50,6 +66,12 @@ or from inside a directory:
 
 ```bash
 mrx add work .
+```
+
+or
+
+```bash
+mrx add work # the . is optional, current location is the default
 ```
 
 Relative paths are resolved to their absolute paths before being stored.
@@ -67,16 +89,30 @@ Label: work    Path: /home/alice/Projects/work
 Label: notes   Path: /home/alice/Documents/notes
 ```
 
+If you've added a bookmark to the same location twice (intentionally or not), you can list the current labels pointing to a path with show command
+
+```bash
+mrx show <path>
+# again, path is optional, default is "."
+```
+
+Example output:
+
+```text
+Label: work    Path: /home/alice/Projects/work
+Label: w       Path: /home/alice/Projects/work
+```
+
 ### Rename a bookmark
 
 ```bash
-mrx rename work office
+mrx rn work office
 ```
 
 ### Remove a bookmark
 
 ```bash
-mrx remove office
+mrx rm office
 ```
 
 ## Jumping to a bookmark
@@ -87,7 +123,7 @@ A CLI application cannot directly change the working directory of the shell that
 mrx() {
     if [[ "$1" == "go" ]]; then
         shift
-        cd "$(command mrx go "$@")"
+        cd "$(command mrx path "$@")"
     else
         command mrx "$@"
     fi
