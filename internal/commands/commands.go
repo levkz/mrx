@@ -6,12 +6,12 @@ import (
 )
 
 func AddMark(marks []marks.Mark, newmark marks.Mark, force bool) ([]marks.Mark, error) {
-	if force {
-		return ReasignMark(marks, newmark)
-	}
-
 	for i := range marks {
 		if marks[i].Label == newmark.Label {
+			if force {
+				marks[i].Path = newmark.Path
+				return marks, nil
+			}
 			return nil, errors.New("mark with that name already exists!")
 		}
 	}
