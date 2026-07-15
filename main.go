@@ -158,7 +158,7 @@ func main() {
 		}
 
 		io.EncodeMarkFile(file, savedMarks)
-	case "rn <old_label> <new_label>":
+	case "rn <old-label> <new-label>":
 		savedMarks, err = commands.RenameMark(savedMarks, cli.Rn.OldLabel, cli.Rn.NewLabel)
 		if err != nil {
 			handleErr(err)
